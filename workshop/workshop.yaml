@@ -1,0 +1,50 @@
+name: Spring on Kubernetes
+
+modules:
+    activate:
+    - workshop-overview
+    - setup-environment
+    - exercises/01-create-spring-app
+    - exercises/02-run-the-app
+    - exercises/03-containerize
+    - exercises/04-registry
+    - exercises/05-deploy-to-k8s
+    - exercises/06-testing-app
+    - exercises/07-expose-svc
+    - exercises/08-testing-ingress
+    - exercises/09-best-practice
+    - exercises/10-add-probes
+    - exercises/11-graceful-shutdown
+    - exercises/12-in-flight-request
+    - exercises/13-update-redeploy
+    - exercises/14-clean-up
+    - exercises/15-skaffold-intro
+    - exercises/16-dev-test-skaffold
+    - exercises/17-change-controller
+    - exercises/18-cleanup
+    - exercises/19-debug-skaffold
+    - exercises/20-create-launcher
+    - exercises/21-kustomize
+    - exercises/22-gs-kustomize
+    - exercises/23-kustomization-yamlfile
+    - exercises/24-customize-deployment
+    - exercises/25-run-kustomize
+    - exercises/26-pipe-to-kubectl
+    - exercises/27-clean-up
+    - exercises/28-kustomize-skaffold
+    - exercises/29-test-skaffold-kustomize
+    - exercises/30-externalized-config
+    - exercises/31-configmaps-in-apps
+    - exercises/32-rm-configmap-deployment
+    - exercises/33-configmaps-sb-config
+    - exercises/34-configmap-kustomize
+    - exercises/35-test-new-deploy
+    - exercises/36-service-discovery
+    - exercises/37-deploy-another
+    - exercises/38-mod-kustomize-config
+    - exercises/39-request-svc
+    - exercises/40-test-app
+    - exercises/41-run-petclinic
+    - exercises/42-deploy-petclinic
+    - exercises/43-dissect-petclinic
+    - workshop-summary

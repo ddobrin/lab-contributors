@@ -1,0 +1,41 @@
+apiVersion: training.eduk8s.io/v1alpha2
+kind: Workshop
+metadata:
+  name: lab-workshop-1
+spec:
+  title: Spring on Kubernetes
+  description: A sample workshop using Markdown
+  vendor: eduk8s.io
+  difficulty: beginner
+  duration: 15m
+  url: https://github.com/everythingeverywhere/lab-contributors
+  content:
+    image: quay.io/eduk8s/jdk11-environment:210217.091829.d9293c8
+    files: github.com/everythingeverywhere/lab-contributors?ref=main
+  session:
+    session:
+      ingresses:
+      - name: petclinic
+        protocol: http
+        host: petclinic-app.$(session_namespace).svc.cluster.local
+        port: 80
+      dashboards:
+      - name: Petclinic
+        url: "$(ingress_protocol)://$(session_namespace)-petclinic.$(ingress_domain)/"
+    namespaces:
+      budget: large
+    resources:  
+      memory: 1.7Gi 
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      console:
+        enabled: true
+        vendor: octant
+      editor:
+        enabled: true
+      registry:
+        enabled: true
+      docker:
+        enabled: true
