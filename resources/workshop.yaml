@@ -10,10 +10,11 @@ spec:
   duration: 15m
   url: https://github.com/everythingeverywhere/lab-contributors
   content:
-    image: quay.io/eduk8s/jdk11-environment:210217.091829.d9293c8
+    image: quay.io/eduk8s/jdk11-environment:latest
     files: github.com/everythingeverywhere/lab-contributors?ref=main
   session:
     session:
+    #example ingress if needed see the educates docs https://docs.edukates.io/
       ingresses:
       - name: petclinic
         protocol: http
@@ -25,7 +26,7 @@ spec:
     namespaces:
       budget: large
     resources:  
-      memory: 1.7Gi 
+      memory: 1.7Gi # workshop pod memory increase if out of memory in workshop
     applications:
       terminal:
         enabled: true
